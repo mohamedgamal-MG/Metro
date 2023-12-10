@@ -1,0 +1,516 @@
+/* Define color variables */
+:root {
+    --main-bg-color: #151511;
+    --main-text-color: #fff;
+    --scrollbar-bg-color: rgba(184, 184, 184, 0.3);
+    --active-bg-color: #eee;
+    --active-text-color: #151511;
+    --accent-color: #4dbf00;
+}
+
+/* Reset margin for all elements */
+* {
+    margin: 0;
+    text-decoration: none;
+    color: var(--main-text-color);
+}
+
+/* Set the default font for the body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--main-bg-color);
+}
+
+/* Styling for the navigation bar */
+.navbar {
+    width: 100%;
+    height: 50px;
+    background-color: var(--main-bg-color);
+}
+
+/* Styling for the container inside the navigation bar */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    color: var(--main-text-color);
+}
+
+/* Styling for the logo */
+.logo {
+    font-family: 'Sen', sans-serif;
+    font-size: 30px;
+    color: var(--accent-color);
+}
+
+/* Styling for the logo container, taking one-third of the available space */
+.logo-container {
+    flex: 1;
+}
+
+/* Styling for the menu container, taking two-thirds of the available space */
+.menu-container {
+    flex: 6;
+}
+
+/* Styling for the menu list */
+.menu-list {
+    display: flex;
+    list-style: none;
+}
+
+/* Styling for each item in the menu list */
+.menu-list-item {
+    margin-right: 35px;
+    transition: .2s linear;
+}
+
+/* Hover effect for menu list items */
+.menu-list-item:hover {
+    padding: 10px;
+    border-radius: 20px;
+    background-color: var(--accent-color);
+    box-shadow: 5px 10px 30px rgba(184, 184, 184, .3);
+    color: var(--main-text-color);
+}
+
+/* Styling for the active menu item */
+.menu-list-item.active {
+    font-weight: bold;
+}
+
+/* Hover effect for the active menu item */
+.menu-list-item.active:hover {
+    background-color: var(--accent-color);
+    box-shadow: 5px 10px 30px rgba(184, 184, 184, .3);
+    color: var(--main-text-color);
+}
+
+/* Styling for the profile container */
+.profile-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Styling for the text container inside the profile */
+.profile-text-container {
+    margin: 0 20px;
+}
+
+/* Styling for the profile text */
+.profile-text {
+    border: none;
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Styling for the profile picture */
+.profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* User dropdown styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Styling for dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--main-bg-color);
+    min-width: 100px;
+    z-index: 1;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Styling for dropdown links */
+.dropdown-content a {
+    color: var(--main-text-color);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Hover effect for dropdown links */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Display dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hover effect for dropdown links in active state */
+.dropdown-content a:hover {
+    color: var(--main-bg-color);
+    border-radius: 10px;
+}
+
+/* Styling for the toggle button */
+.toggle {
+    width: 40px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+}
+
+/* Styling for the icon inside the toggle button */
+.toggle-icon {
+    color: var(--accent-color);
+    font-size: 12px;
+}
+
+/* Styling for the toggle ball */
+.toggle-ball {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var(--main-bg-color);
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+/* Styling for the main container */
+.container {
+    background-color: var(--main-bg-color);
+    min-height: 100vh;
+    color: var(--main-text-color);
+}
+
+/* Styling for the search bar container */
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: var(--main-text-color);
+    flex: 2;
+}
+
+/* Styling for the search bar input */
+.search-container .search-bar {
+    padding: 3px 0px 3px 8px;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: var(--main-text-color);
+    -webkit-transition: 1s linear;
+    width: 0px;
+    margin-left: 5px;
+    padding: 7px;
+}
+
+/* Styling for the search bar input in active state */
+.search-container .search-bar.click {
+    width: 200px;
+}
+
+/* Styling for the search icon */
+.fa-search {
+    color: rgba(255, 255, 255, .7);
+    font-size: 13px;
+    cursor: pointer;
+    transition: .4s linear;
+}
+
+/* Hover effect for the search icon */
+.fa-search:hover {
+    color: var(--main-text-color);
+}
+
+/* Styling for the search box container */
+.search-box {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    border: 1px solid var(--main-text-color);
+    top: 35px;
+    left: -10;
+    background: rgba(184, 184, 184, .3);
+    border-radius: 10px;
+    overflow: auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s linear;
+}
+
+/* Styling for search box scrollbar */
+.search-box::-webkit-scrollbar {
+    width: 7px;
+    background: rgba(184, 184, 184, .3);
+    border-radius: 20px;
+}
+
+/* Styling for search box scrollbar thumb */
+.search-box::-webkit-scrollbar-thumb {
+    background: rgba(184, 184, 184, .7);
+    border-radius: 20px;
+}
+
+/* Styling for search box links */
+.search-box a {
+    text-decoration: none;
+    color: var(--main-text-color);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    transition: .3s linear;
+}
+
+/* Hover effect for search box links */
+.search-box a:hover {
+    background: rgba(184, 184, 184, .5);
+    border-radius: 10px;
+}
+
+/* Styling for search box images */
+.search-box a img {
+    width: 30px;
+    height: 45px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+/* Styling for search box image content */
+.search-box a img .content {
+    color: var(--main-text-color);
+}
+
+/* Styling for search box image content title */
+.search-box a img .content h6 {
+    font-size: 13px;
+}
+
+/* Styling for search movie description */
+.search-movie-desc {
+    color: rgba(255, 255, 255, .7);
+    font-size: 10px;
+    font-weight: 500;
+}
+
+/* Styling for the featured content section */
+.featured-content {
+    background-size: cover;
+    height: 50vh;
+    padding: 50px;
+    z-index: 1;
+}
+
+/* Styling for the title inside the featured content */
+.feature-title {
+    width: 200px;
+}
+
+/* Styling for the description inside the featured content */
+.featured-desc {
+    width: 500px;
+    color: #eee;
+    margin: 30px 0;
+}
+
+/* Styling for the generic button */
+.btn {
+    padding: 10px 20px;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 30px;
+    color: var(--main-text-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Styling for the movie list container */
+.movie-list-container {
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Styling for the movie list wrapper */
+.movie-list-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Styling for the movie list */
+.movie-list {
+    display: flex;
+    align-items: center;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+    margin: 30px 0;
+}
+
+/* Styling for each item in the movie list */
+.movie-list-item {
+    margin-right: 30px;
+    position: relative;
+}
+
+/* Hover effect for the movie list item */
+.movie-list-item:hover .movie-list-item-img {
+    transform: scale(1.2);
+    transition: all 1s ease-in-out;
+    margin: 0 20px;
+    opacity: 50%;
+    background-color: rgba(21, 21, 17, .98);
+}
+
+/* Hover effect for the title, description, and button inside the movie list item */
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-btn {
+    opacity: 1;
+}
+
+/* Styling for the image inside the movie list item */
+.movie-list-item-img {
+    transition: all 1s ease-in-out;
+    width: 320px;
+    border-radius: 30px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+/* Styling for the title inside the movie list item */
+.movie-list-item-title {
+    padding: 0 17px;
+    position: absolute;
+    font-size: 20px;
+    font-weight: bold;
+    top: 10%;
+    left: 0;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+/* Styling for the description inside the movie list item */
+.movie-list-item-desc {
+    width: 210px;
+    padding: 10px 20px;
+    font-size: 14px;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+/* Styling for the button inside the movie list item */
+.movie-list-item-btn {
+    position: absolute;
+    bottom: 10%;
+    left: 40px;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+/* Styling for the arrow icon */
+.arrow {
+    font-size: 120px;
+    color: lightgray;
+    position: absolute;
+    top: 135px;
+    right: 0;
+    opacity: 50%;
+    cursor: pointer;
+}
+
+/* Styling for the active state of the main container */
+.movie-list-title.active {
+    color: var(--main-bg-color);
+}
+
+.container.active {
+    background-color: var(--active-bg-color);
+    color: var(--active-text-color);
+}
+
+/* Styling for the active state of the navigation bar container */
+.navbar-container.active {
+    background-color: var(--active-bg-color);
+}
+
+.menu-list-item.active,
+.dropbtn.active {
+    color: var(--main-bg-color);
+}
+
+/* Styling for the active state of the sidebar */
+.sidebar.active {
+    background-color: var(--active-bg-color);
+}
+
+/* Styling for the active state of the left menu icon */
+.left-menu-icon.active,
+.dropdown.active {
+    color: var(--main-bg-color);
+}
+
+/* Styling for the active state of the toggle button */
+.toggle.active,
+a:hover.active {
+    background-color: var(--main-bg-color);
+}
+
+/* Styling for the active state of the toggle ball */
+.toggle-ball.active {
+    background-color: var(--main-text-color);
+    transform: translateX(-20px);
+    transition: all .5s ease-in-out;
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 940px) {
+    .menu-container {
+        display: none;
+    }
+}
+
+/* Styling for the active state of the arrow icon */
+.arrow.active {
+    color: var(--main-bg-color);
+    opacity: 70%;
+}
+
+.dropdown-content.active {
+    background-color: var(--active-bg-color);
+    color: var(--active-text-color);
+}
+
+.profile-text.active {
+    background-color: var(--active-bg-color);
+    border: none;
+    color: var(--active-text-color);
+}
+
+body.active {
+    background-color: var(--active-bg-color);
+    color: var(--active-text-color);
+}
+
+.movie_details_title.active,
+p.active {
+    color: var(--active-text-color);
+}
+
+/* Add more styles as needed */
