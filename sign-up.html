@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/sign-up.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Sen:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Add Firebase SDK -->
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="container">
+      <form id="signup-form">
+        <h1 class="metro-logo">Merto</h1>
+        <h2>Sign Up</h2>
+        <input
+          type="text"
+          placeholder="Username"
+          id="username"
+          name="username"
+          required
+        />
+        <input
+          type="email"
+          placeholder="Email"
+          id="email"
+          name="email"
+          required
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          id="password"
+          name="password"
+          required
+        />
+        <button type="submit">Sign Up</button>
+        <div class="or-divider">
+          <span>or</span>
+        </div>
+        <button id="loginButton" class="btn">login</button>
+        <div class="social-login">
+          <button type="button" id="facebook-login">
+            Sign Up with Facebook
+          </button>
+          <button type="button" id="google-login">Sign Up with Google</button>
+        </div>
+      </form>
+    </div>
+
+    <script src="js/sign-up.js"></script>
+  </body>
+</html>

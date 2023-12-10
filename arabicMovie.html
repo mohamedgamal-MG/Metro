@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadata for character set and viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title -->
+    <title>Metro</title>
+
+    <!-- Stylesheets -->
+    <link rel="shortcut icon" href="img/icon.png" type="img" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Sen:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/moviePage.css" />
+    <link rel="stylesheet" href="./css/mainStyle.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Sen:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="module" src="js/app.js"></script>
+  </head>
+
+  <body class="body">
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <span>Loading</span>
+      </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <!-- Logo section -->
+        <div class="logo-container"><h1 class="logo">Metro</h1></div>
+
+        <!-- Menu section -->
+        <div class="menu-container">
+          <ul class="menu-list">
+            <li><a href="index.html" class="menu-list-item">Home</a></li>
+            <li><a href="moviePage.html" class="menu-list-item">Movies</a></li>
+            <li><a href="popular.html" class="menu-list-item">Popular</a></li>
+            <li><a href="arabicMovie.html" class="menu-list-item">Arabic</a></li>
+          </ul>
+        </div>
+
+        <!-- Search bar section -->
+        <div class="search-container">
+          <i class="left-menu-icon fa-solid fa-magnifying-glass fa-solid fa-search" id="search-icon"></i>
+          <input
+            type="text"
+            placeholder="Search Movies"
+            class="search-bar"
+            id="search"
+            autocomplete="off"
+          ></input>
+          <div class="search-box"></div>
+        </div>
+
+        <!-- Profile and Theme toggle section -->
+        <div class="profile-container">
+          <img src="./img/profile.jpg" alt="" class="profile-picture" />
+
+          <!-- Profile dropdown -->
+          <div class="profile-text-container dropdown">
+            <button class="profile-text dropbtn">
+              Profile
+              <i class="fa-solid fa-caret-down arrow-down dropbtn"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#" class="adrop">Settings</a>
+              <a href="#" class="adrop">Edit</a>
+              <a href="login.html" class="adrop">Sign Out</a>
+            </div>
+          </div>
+
+          <!-- Theme toggle -->
+          <div class="toggle">
+            <i class="fa-solid fa-moon toggle-icon"></i>
+            <i class="fa-solid fa-sun toggle-icon"></i>
+            <div class="toggle-ball"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <main class="main">
+      <section class="section_one section_one_movieDetail">
+        <section class="section_two section_two2">
+          <!-- Now Playing Movies Container and Search Section -->
+          <section class="Now_playing_movies_container_search">
+            <!-- Left and right arrows for navigation -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="leftarrow arrowsearch arrowbtn bi-chevron-left" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+              class="rightarrow  arrowsearch  arrowbtn bi-chevron-right" viewBox="0 0 16 16">
+              <path fill-rule="evenodd"
+                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+            </svg>
+
+            <!-- TV show category container -->
+            <div class="tvshowcategory_container">
+              <ul class="tvshowcatrgory_ul movies_category_ul"></ul>
+            </div>
+
+            <!-- Search result container -->
+            <div class="search_result_div"></div>
+
+            <!-- Pagination container -->
+            <div class="pagination_container">
+              <div class="pagination">
+                <button class="previous_btn paginationBtn">Previous</button>
+                <span class="pageCount"></span>
+                <button class="Next_btn paginationBtn">Next</button>
+              </div>
+            </div>
+          </section>
+        </section>
+      </section>
+    </main>
+
+    <!-- JavaScript module -->
+    <script type="module" src="js/arabivMovie.js"></script>
+  </body>
+</html>

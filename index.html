@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadata for character set and viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title -->
+    <title>Metro</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/icon.png" type="img">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/mainStyle.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Sen:wght@400;600;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+  </head>
+
+  <body>
+    <!-- Preloader -->
+    <div class="preloader">
+      <div class="wrapper">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <div class="shadow"></div>
+        <span>Loading</span>
+      </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <!-- Logo section -->
+        <div class="logo-container"><h1 class="logo">Metro</h1></div>
+
+        <!-- Menu section -->
+        <div class="menu-container">
+          <ul class="menu-list">
+            <li><a href="./index.html" class="menu-list-item">Home</a></li>
+            <li><a href="./moviePage.html" class="menu-list-item">Movies</a></li>
+            <li><a href="popular.html" class="menu-list-item">Popular</a></li>
+            <li><a href="arabicMovie.html" class="menu-list-item">Arabic</a></li>
+            
+          </ul>
+        </div>
+
+        <!-- Search bar section -->
+        <div class="search-container">
+          <i class="left-menu-icon fa-solid fa-magnifying-glass fa-solid fa-search" id="search-icon"></i>
+          <input type="text" placeholder="Search Movies" class="search-bar" id="search"></input>
+          <div class="search-box"></div>
+        </div>
+
+        <!-- Profile and Theme toggle section -->
+        <div class="profile-container">
+          <img src="./img/profile.jpg" alt="" class="profile-picture" />
+
+          <!-- Profile dropdown -->
+          <div class="profile-text-container dropdown">
+            <button class="profile-text dropbtn">
+              Profile
+              <i class="fa-solid fa-caret-down arrow-down dropbtn"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#" class="adrop">Settings</a>
+              <a href="#" class="adrop">Edit</a>
+              <a href="login.html" class="adrop">Sign Out</a>
+            </div>
+          </div>
+
+          <!-- Theme toggle -->
+          <div class="toggle">
+            <i class="fa-solid fa-moon toggle-icon"></i>
+            <i class="fa-solid fa-sun toggle-icon"></i>
+            <div class="toggle-ball"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="container">
+      <div class="content-container">
+        <!-- Featured content section -->
+        <div class="featured-content first" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #151511),
+        url('https://image.tmdb.org/t/p/original//m06dOSnShSmGfVgz4iSQhx6bzWv.jpg') no-repeat;
+        background-size: cover">
+          <img src="img/f-t-1.png" alt="" class="feature-title" />
+          <p class="featured-desc">
+            An engineering college student invents the first of its kind robot in the Middle East, in an attempt to avenge his father's death and achieve justice, which gets him pursued by the authorities.
+          </p>
+          <button class="featured-btn-frist btn">WATCH</button>
+        </div>
+
+        <!-- Popular movies section -->
+        <div class="movie-list-container">
+          <h1 class="movie-list-title">POPULAR</h1>
+          <div class="movie-list-wrapper">
+            <div class="movie-list popular-list"></div>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow popular-arrow"></i>
+        </div>
+
+        <!-- Drama movies section -->
+        <div class="movie-list-container second">
+          <h1 class="movie-list-title">DRAMA</h1>
+          <div class="movie-list-wrapper">
+            <div class="movie-list drama-list"></div>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow"></i>
+        </div>
+
+        <!-- Featured content section 2 -->
+        <div class="featured-content first" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #151511),
+        url('https://image.tmdb.org/t/p/original//A1EWX46DxpEuiha7K0XY6vhWbdZ.jpg') no-repeat;
+        background-size: cover">
+          <img src="img/f-t-2.png" alt="" class="feature-title" />
+          <p class="featured-desc">
+            Uta — the most beloved singer in the world. Her voice, which she sings with while concealing her true identity, has been described as “otherworldly.” 
+          </p>
+          <button class="featured-btn-second btn">WATCH</button>
+        </div>
+
+        <!-- Comedy movies section -->
+        <div class="movie-list-container third">
+          <h1 class="movie-list-title">COEMDY</h1>
+          <div class="movie-list-wrapper">
+            <div class="movie-list comedy-list"></div>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow"></i>
+        </div>
+
+        <!-- Anime movies section -->
+        <div class="movie-list-container fourth">
+          <h1 class="movie-list-title">ANIME</h1>
+          <div class="movie-list-wrapper">
+            <div class="movie-list anime-list"></div>
+          </div>
+          <i class="fa-solid fa-chevron-right arrow"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript module -->
+    <script type="module" src="js/app.js"></script>
+    <!-- <script src="js/search.js" defer></script> -->
+  </body>
+</html>
